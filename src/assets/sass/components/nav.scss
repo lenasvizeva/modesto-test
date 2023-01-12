@@ -1,0 +1,35 @@
+/*------------------*
+# Nav
+*------------------*/
+
+nav {
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    li {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    li a {
+        text-decoration: none;
+        color: $color-darkgrey;
+        // font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

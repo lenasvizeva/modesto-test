@@ -1,0 +1,46 @@
+.header {
+    color: $color-darkgrey;
+    padding: 20px 0;
+
+    &__inner {
+        width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 98px;
+        height: 86px;
+    }
+
+    &__tel {
+        font-family: 'Roboto', Arial;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 600;
+        margin-right: 50px;
+    }
+
+    &__auth {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        .btn {
+            height: 49px;
+
+            &--login {
+                width: 114px;
+
+            }
+
+            &--signup {
+                width: 202px;
+                border: 1px solid #000000;
+                border-radius: 12px;
+            }
+        }
+    }
+}
