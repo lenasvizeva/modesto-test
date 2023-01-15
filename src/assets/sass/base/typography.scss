@@ -8,7 +8,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     color: $color-black;
-    margin: $heading-spacing;
+    margin: 0;
 }
 
 /*
@@ -20,7 +20,8 @@ h1 {
 }
 
 h2 {
-    font-size: $h2-size;
+    font-size: 36px;
+    line-height: 43px;
 }
 
 h3 {
