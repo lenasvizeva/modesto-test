@@ -5,9 +5,11 @@
 @import "./base/variables";
 @import "./base/base";
 @import "./base/typography";
+@import "./base/mixins";
 
 // Components
 @import "./components/nav";
 @import "./components/main-content";
 @import "./components/header";
 @import "./components/feedback-form";
+@import "./components/footer";
