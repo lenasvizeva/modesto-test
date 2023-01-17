@@ -5,6 +5,11 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include tablet {
+        padding: 32px 24px;
+        flex-flow: row wrap;
+    }
+
     h3, a {
         color: $color-beige;
     }
@@ -23,15 +28,44 @@
     &__address {
         max-width: 42%;
 
+        @include tablet {
+            order: 1;
+            margin-bottom: 48px;
+            max-width: 40%;
+        }
+
         .flex {
             justify-content: space-between;
+
+            @include tablet {
+                flex-direction: column;
+            }
 
             span  {
                 flex-basis: 43%;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 23px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                }
             }
+        }
+    }
+
+    &__social {
+        @include tablet {
+            order: 3;
+            width: 60%;
+        }
+    }
+
+    &__feedback {
+        @include tablet {
+            flex-basis: 35%;
+            order: 2;
+            align-self: flex-start;
         }
     }
 
@@ -48,6 +82,11 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 19px;
+
+        @include tablet {
+            width: 98%;
+            height: 48px;
+        }
 
         &:after {
             content: '';
