@@ -8,7 +8,10 @@
     overflow: hidden;
 
     @include tablet {
-        position: relative;;   
+        position: relative;
+    }
+    @include mobile {
+        position: relative;
     }
 }
 
@@ -28,6 +31,9 @@
         @include tablet {
             height: 100%;   
         }
+        @include mobile {
+            height: 100%;   
+        }
     }
 }
 
@@ -40,6 +46,9 @@
 
     @include tablet {
         padding: 40px;
+    }
+    @include mobile {
+        padding: 20px;
     }
 }
 
@@ -57,7 +66,9 @@
 
         @include tablet {
             width: 100%;
-            
+        }
+        @include mobile {
+            width: 100%;
         }
     }
 
@@ -67,6 +78,22 @@
         line-height: 67px;
         margin-top: 0;
         margin-bottom: 40px;
+
+        @include mobile {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @include mobile {
+                display: block;
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 24px;
+                padding: 0 15px;
+            }
+        }
     }
 
     &__subtitle {
@@ -75,6 +102,14 @@
         font-size: 26px;
         line-height: 31px;
         margin-bottom: 58px;
+
+        @include mobile {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 24px;
+            padding: 0 25px;
+        }
     }
 
     .btn {
@@ -82,15 +117,39 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 21px;
+        color: $color-darkgrey;
+
+        @include mobile {
+            margin: 0;
+            flex-basis: 48%;
+            font-size: 4vw;
+            line-height: 5vw;
+            padding: 0;
+        }
 
         &--yellow {
             width: 214px;
             height: 65px;
+
+            @include mobile {
+                height: 43px;
+            }
         }
         
         &--blue {
             width: 242px;
             height: 69px;
+
+            @include mobile {
+                height: 43px;
+            }
+        }
+    }
+
+    .btn-group {
+        @include mobile {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
@@ -100,6 +159,9 @@
     height: 100vh;
 
     @include tablet {
+        height: 100%;   
+    }
+    @include mobile {
         height: 100%;   
     }
 }

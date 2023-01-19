@@ -4,12 +4,20 @@
             <img src="../img/svg/logo.svg" class="logo" />
         </div>
 
-        {% include "nav.html" %}
+        <div class="header__nav">
+            {% include "nav.html" %}
+        </div>
+        
 
         <div class="flex">
             <span class="header__tel">
                 +3 67 8754 7894
             </span>
+
+            <div class="header__lang">
+                <button class="btn btn--lang active">Ru</button>
+                <button class="btn btn--lang">Eng</button>
+            </div>
 
             <div class="header__auth">
                 <button class="btn btn--login">
@@ -21,6 +29,6 @@
                 </button>
             </div>
         </div>
-        
+       
     </div>
 </header>

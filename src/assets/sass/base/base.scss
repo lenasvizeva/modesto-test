@@ -44,7 +44,7 @@ body {
     align-items: center;
 }
 
-.btn, button {
+.btn {
     border: none;
     background-color: transparent;
     border-radius: 12px;
@@ -52,6 +52,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: $color-darkgrey;
 
     &--yellow {
         background-color: $color-yellow;

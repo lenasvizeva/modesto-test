@@ -9,6 +9,10 @@
         padding: 32px 24px;
         flex-flow: row wrap;
     }
+    @include mobile {
+        padding: 32px 20px;
+        flex-direction: column;
+    }
 
     h3, a {
         color: $color-beige;
@@ -33,11 +37,18 @@
             margin-bottom: 48px;
             max-width: 40%;
         }
+        @include mobile {
+            max-width: 80%;
+            margin-bottom: 48px;
+        }
 
         .flex {
             justify-content: space-between;
 
             @include tablet {
+                flex-direction: column;
+            }
+            @include mobile {
                 flex-direction: column;
             }
 
@@ -50,6 +61,9 @@
                 @include tablet {
                     margin-bottom: 16px;
                 }
+                @include mobile {
+                    margin-bottom: 16px;
+                }
             }
         }
     }
@@ -58,6 +72,10 @@
         @include tablet {
             order: 3;
             width: 60%;
+            margin-bottom: 48px;
+        }
+        @include mobile {
+            margin-bottom: 48px;
         }
     }
 
@@ -66,6 +84,9 @@
             flex-basis: 35%;
             order: 2;
             align-self: flex-start;
+        }
+        @include mobile {
+            margin-bottom: 48px;
         }
     }
 
@@ -98,5 +119,22 @@
             background-size: 100%;
             margin-left: 13px;
         }
-    } 
+    }
+
+    &__copyright {
+        display: none;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #B9B3B3;
+
+        @include tablet {
+            display: block;
+            width: 100%;
+            order: 5;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
 }

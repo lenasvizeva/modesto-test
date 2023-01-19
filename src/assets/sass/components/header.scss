@@ -5,6 +5,9 @@
     @include tablet {
         padding: 20px 40px;
     }
+    @include mobile {
+        padding: 8px 20px; 
+    }
 
     &__inner {
         width: 1420px;
@@ -17,11 +20,35 @@
         @include tablet {
             width: 100%;
         }
+        @include mobile {
+           width: 100%; 
+        }
     }
 
-    .logo {
-        width: 98px;
-        height: 86px;
+    &__logo {
+
+        .logo {
+            width: 98px;
+            height: 86px;
+
+            @include tablet {
+                order: 1;
+                margin-right: auto;
+            }
+            @include mobile {
+                width: 48px;
+                height: 42px;
+            }
+        }
+    }
+
+    &__nav {
+        @include tablet {
+            order: 5;
+        }
+        @include mobile {
+            order: 4;
+        }
     }
 
     &__tel {
@@ -30,6 +57,47 @@
         line-height: 23px;
         font-weight: 600;
         margin-right: 50px;
+
+        @include tablet {
+            order: 2;
+        }
+        @include mobile {
+            order: 2;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    &__lang {
+        display: none;
+
+        button {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #9B9B99;
+            padding: 4px;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &.active {
+                color: $color-darkgrey;
+            }
+        }
+
+        @include tablet {
+            display: flex;
+            order: 3;
+        }
+        @include mobile {
+            display: flex;
+            order: 3;
+        }
     }
 
     &__auth {
@@ -37,12 +105,19 @@
         font-size: 18px;
         line-height: 21px;
 
+        @include tablet {
+            order: 4;
+            margin: 0 20px;
+        }
+        @include mobile {
+            display: none;
+        }
+
         .btn {
             height: 49px;
 
             &--login {
                 width: 114px;
-
             }
 
             &--signup {
@@ -53,6 +128,7 @@
                 @include tablet {
                     display: none;
                 }
+                
             }
         }
     }

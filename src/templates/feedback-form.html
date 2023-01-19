@@ -16,26 +16,46 @@
     </div>
 
     <div class="feedback-form__form">
-        <form>
-            <label class="feedback-form__label">Ваше имя
-                <input type="text" placeholder="Фролова Александра Васильевна" />
-            </label>
-            <label class="feedback-form__label">Название Компании
-                <input type="text" placeholder="ООО Атлантика" />
-            </label>
-            <label class="feedback-form__label">E-mail
-                <input type="email" placeholder="flolovaalexa@com.rur" />
-            </label>
-            <label class="feedback-form__label">Номер телефона
-                <input type="tel" placeholder="+7 (XXX) - XXX XX XX" />
-            </label>
-            <label class="feedback-form__label">Промокод
-                <input type="text" placeholder="HGF864" />
-            </label>
+        <form id="regForm" action="">
+            <section class="feedback-form__section">
+                <label for="name" class="feedback-form__label">Ваше имя
+                    <input type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required />
+                </label>
+                <label for="company" class="feedback-form__label">Название Компании
+                    <input type="text" name="company" id="company" placeholder="ООО Атлантика" required />
+                </label>
+                <label for="email" class="feedback-form__label">E-mail
+                    <input type="email" name="email" id="email" placeholder="flolovaalexa@com.rur" required />
+                </label>
+                <label for="phone" class="feedback-form__label">Номер телефона
+                    <input type="tel" name="phone" id="phone" placeholder="+7 (XXX) - XXX XX XX" required />
+                </label>
+                <label for="promocode" class="feedback-form__label">Промокод
+                    <input type="text" name="promocode" id="promocode" placeholder="HGF864" />
+                </label>
 
-            <button class="btn btn--yellow">
-                Далее
-            </button>
+                <input type="submit" value="Далее" class="btn btn--yellow" onsubmit="onSubmit">
+            </section>
+
+            <!-- <section class="feedback-form__section">
+                <label for="name" class="feedback-form__label">Ваше имя
+                    <input type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required />
+                </label>
+                <label for="company" class="feedback-form__label">Название Компании
+                    <input type="text" name="company" id="company" placeholder="ООО Атлантика" required />
+                </label>
+                <label for="email" class="feedback-form__label">E-mail
+                    <input type="email" name="email" id="email" placeholder="flolovaalexa@com.rur" required />
+                </label>
+                <label for="phone" class="feedback-form__label">Номер телефона
+                    <input type="tel" name="phone" id="phone" placeholder="+7 (XXX) - XXX XX XX" required />
+                </label>
+                <label for="promocode" class="feedback-form__label">Промокод
+                    <input type="text" name="promocode" id="promocode" placeholder="HGF864" />
+                </label>
+
+                <input type="submit" value="Далее" class="btn btn--yellow" onsubmit="onSubmit">
+            </section> -->
         </form>
     </div>
        

@@ -9,6 +9,14 @@ nav {
         margin: 0;
         padding: 0;
         display: flex;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     li {
@@ -30,6 +38,18 @@ nav {
 
         &:hover {
             text-decoration: none;
+        }
+    }
+
+    .btn--menu {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include mobile {
+            display: block;
         }
     }
 }
