@@ -53,6 +53,8 @@ body {
     justify-content: center;
     cursor: pointer;
     color: $color-darkgrey;
+    font-family: $raleway;
+    font-weight: 600;
 
     &--yellow {
         background-color: $color-yellow;

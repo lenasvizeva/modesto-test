@@ -5,7 +5,7 @@
             <img src="./img/form-back.png" />
         </div>
 
-        <h2>Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
+        <h2 class="feedback-form__title">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
 
         <p>
             Регистрация на нашем сайте занимает несколько минут, 
@@ -16,7 +16,7 @@
     </div>
 
     <div class="feedback-form__form">
-        <form id="regForm" action="">
+        <form id="regForm" name="regForm" action="">
             <section class="feedback-form__section">
                 <label for="name" class="feedback-form__label">Ваше имя
                     <input type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required />
@@ -34,28 +34,36 @@
                     <input type="text" name="promocode" id="promocode" placeholder="HGF864" />
                 </label>
 
-                <input type="submit" value="Далее" class="btn btn--yellow" onsubmit="onSubmit">
+                <button class="btn btn--yellow" onclick="regFormOnClickForward()">Далее</button>
             </section>
 
-            <!-- <section class="feedback-form__section">
-                <label for="name" class="feedback-form__label">Ваше имя
-                    <input type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required />
+            <section class="feedback-form__section feedback-form__section--password">
+                <label for="pass" class="feedback-form__label">Пароль
+                    <input type="text" name="pass" id="pass" placeholder="Создайте пароль" required />
                 </label>
-                <label for="company" class="feedback-form__label">Название Компании
-                    <input type="text" name="company" id="company" placeholder="ООО Атлантика" required />
+                <label for="passRepeate" class="feedback-form__label">Подтвердите пароль
+                    <input type="text" name="passRepeate" id="passRepeate" placeholder="Повторите пароль" required />
                 </label>
-                <label for="email" class="feedback-form__label">E-mail
-                    <input type="email" name="email" id="email" placeholder="flolovaalexa@com.rur" required />
-                </label>
-                <label for="phone" class="feedback-form__label">Номер телефона
-                    <input type="tel" name="phone" id="phone" placeholder="+7 (XXX) - XXX XX XX" required />
-                </label>
-                <label for="promocode" class="feedback-form__label">Промокод
-                    <input type="text" name="promocode" id="promocode" placeholder="HGF864" />
+                
+                {% include "captcha.html" %}
+
+                <label for="captcha" class="feedback-form__label">Введите символы из картинки
+                    <input type="text" name="captcha" id="captcha" placeholder="Код из картинки" required />
                 </label>
 
-                <input type="submit" value="Далее" class="btn btn--yellow" onsubmit="onSubmit">
-            </section> -->
+                <button class="btn btn--blue btn--back" onclick="regFormOnClickBack()">Назад</button>
+                <input type="submit" value="Подтвердить" class="btn btn--yellow btn--submit" onsubmit="onSubmit">
+
+                <div class="feedback-form__checkbox">
+                    <input type="checkbox" class="checkbox" id="personalData" name="personalData" checked>
+                    <span class="checkmark"></span>
+
+                    <label for="personalData" class="">
+                        Я даю согласие на обработку моих персональных данных и правовых документов
+                    </label>
+
+                </div>
+            </section>
         </form>
     </div>
        
