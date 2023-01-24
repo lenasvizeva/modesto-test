@@ -1,3 +1,7 @@
+/*------------------*
+# Feedback Form
+*------------------*/
+
 .feedback-form {
     width: 1140px;
     padding: 80px;
@@ -19,17 +23,19 @@
 
     &__section {
         width: 100%;
+        display: none;
 
-        @include tablet {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+        &.active {
+            display: block;
+
+            @include tablet {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
 
-
-        &--password {
-            display: none;
-        }
     }
 
     &__background {
@@ -89,12 +95,6 @@
         @include tablet {
             margin-top: 58px;
         }
-
-        form {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
     }
 
     &__label {
@@ -103,8 +103,24 @@
         width: 100%;
         font-family: $raleway;
 
+        &:first-child {
+            @include tablet {
+                order: 0;
+            }
+        }
+        &:nth-child(2) {
+            @include tablet {
+                order: 2;
+            }
+        }
+        &:nth-child(4) {
+            @include tablet {
+                order: 4;
+            }
+        }
+
         @include tablet {
-            flex-basis: 47%;
+            flex-basis: 46.8%;
         }
         @include mobile {
             font-weight: 500;
@@ -126,27 +142,41 @@
         
     }
 
+    .btn-group {
+        @include tablet {
+            order: 3;
+            width: 46.8%;
+        }
+    }
+
     .btn {
         width: 100%;
         height: 51px;
-        margin: 20px 0;
+        margin-top: 20px;
         background-color: $color-yellow;
         border-radius: 12px;
         
         @include tablet {
-            width: 47%;
+            width: 46.8%;
+            order: 5;
         }
-
+        
         &--back {
             width: 40%;
             display: inline-block;
             margin-right: 5px;
             background-color: $color-paleblue;
+            margin-bottom: 20px;
+
+            @include tablet {
+                width: 36%;
+            }
         }
 
         &--submit {
             width: 57%;
             display: inline-block;
+            margin-bottom: 20px;
         }
     }
 
@@ -167,14 +197,15 @@
         height: 94px;
 
         @include tablet {
-            order: 2;
-            width: 292px;
+            width: 46.8%;
+            order: 1;
         }
-
           
         img {
             @include tablet {
                 width: 100%;
+                height: 100%;
+                object-fit: contain;
             } 
         }
     }
@@ -182,6 +213,11 @@
     &__checkbox {
         position: relative;
         display: flex;
+
+        @include tablet {
+            order: 5;
+            width: 46.8%;
+        }
 
         .checkbox {
             position: absolute;

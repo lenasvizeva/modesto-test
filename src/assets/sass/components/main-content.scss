@@ -3,7 +3,6 @@
 *------------------*/
 
 .main-content {
-    // height: calc(100vh - 130px);
     width: 100%;
     overflow: hidden;
 
@@ -66,6 +65,7 @@
 
         @include tablet {
             width: 100%;
+            max-width: 800px;
         }
         @include mobile {
             width: 100%;
@@ -130,20 +130,19 @@
         }
 
         &--yellow {
-            width: 214px;
-            height: 65px;
+            padding: 22px 36px;
 
             @include mobile {
-                height: 43px;
+                padding: 12px 13px;
+
             }
         }
         
         &--blue {
-            width: 242px;
-            height: 69px;
+            padding: 24px 45px;
 
             @include mobile {
-                height: 43px;
+                padding: 12px 7.5px;
             }
         }
     }

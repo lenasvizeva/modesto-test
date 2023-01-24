@@ -1,3 +1,5 @@
+<!-- registration form -->
+
 <div class="feedback-form">
 
     <div class="feedback-form__info">
@@ -17,7 +19,8 @@
 
     <div class="feedback-form__form">
         <form id="regForm" name="regForm" action="">
-            <section class="feedback-form__section">
+
+            <section class="feedback-form__section active">
                 <label for="name" class="feedback-form__label">Ваше имя
                     <input type="text" name="name" id="name" placeholder="Фролова Александра Васильевна" required />
                 </label>
@@ -37,7 +40,7 @@
                 <button class="btn btn--yellow" onclick="regFormOnClickForward()">Далее</button>
             </section>
 
-            <section class="feedback-form__section feedback-form__section--password">
+            <section class="feedback-form__section feedback-form__section--pass">
                 <label for="pass" class="feedback-form__label">Пароль
                     <input type="text" name="pass" id="pass" placeholder="Создайте пароль" required />
                 </label>
@@ -51,8 +54,10 @@
                     <input type="text" name="captcha" id="captcha" placeholder="Код из картинки" required />
                 </label>
 
-                <button class="btn btn--blue btn--back" onclick="regFormOnClickBack()">Назад</button>
-                <input type="submit" value="Подтвердить" class="btn btn--yellow btn--submit" onsubmit="onSubmit">
+                <div class="btn-group">
+                    <button class="btn btn--blue btn--back" onclick="regFormOnClickBack()">Назад</button>
+                    <input type="submit" value="Подтвердить" class="btn btn--yellow btn--submit" onsubmit="onSubmit">
+                </div>
 
                 <div class="feedback-form__checkbox">
                     <input type="checkbox" class="checkbox" id="personalData" name="personalData" checked>
