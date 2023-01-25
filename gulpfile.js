@@ -119,14 +119,18 @@ function watch_files() {
 
 function deploy(cb) {
     gulp.src('./dist/**/*')
-        .pipe(ghPages());
+        .pipe(
+            ghPages()
+        );
     cb();
 }
 
 
 
 // Default 'gulp' command with start local server and watch files for changes.
-exports.default = series(nunjucks, css, js, imageMin, watch_files, deploy);
+exports.default = series(nunjucks, css, js, imageMin, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
 exports.build = parallel(nunjucksMinify, css, js, imageMin);
+
+exports.deploy = series(deploy);
