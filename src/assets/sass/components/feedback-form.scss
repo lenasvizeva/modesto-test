@@ -171,6 +171,9 @@
             @include tablet {
                 width: 36%;
             }
+            @include mobile {
+                width: 38%;
+            }
         }
 
         &--submit {
@@ -200,13 +203,15 @@
             width: 46.8%;
             order: 1;
         }
+        @include mobile {
+            width: 100%;
+            height: auto;
+        }
           
         img {
-            @include tablet {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            } 
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 

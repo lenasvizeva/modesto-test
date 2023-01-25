@@ -10,7 +10,7 @@ const browserSync = require("browser-sync").create(); //https://browsersync.io/d
 const nunjucksRender = require("gulp-nunjucks-render");
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
-const ghPages = require('gulp-gh-pages');
+// const ghPages = require('gulp-gh-pages');
 
 // /*
 // TOP LEVEL FUNCTIONS
