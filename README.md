@@ -18,3 +18,9 @@ The live reload task should then initiate the project on http://localhost:3000. 
 To build assets without starting a local server with live reload, use the build command:
 
     gulp build
+
+## Deploy
+
+To deploy project to the GitHub Pages use command:
+
+    npm run deploy 
